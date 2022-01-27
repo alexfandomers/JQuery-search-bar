@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>FullScreen Search Box | CodingNepal</title>
+      <link rel="stylesheet" href="style.css">
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="close-btn">
+         <span class="fas fa-times"></span>
+      </div>
+      <div class="wrapper">
+         <div class="search-btn">
+            <span class="fas fa-search"></span>
+         </div>
+         <div class="search-data">
+            <input type="text" required>
+            <div class="line"></div>
+            <label>Type to search..</label>
+            <span class="fas fa-search"></span>
+         </div>
+      </div>
+      <script>
+         $(".search-btn").click(function(){
+           $(".wrapper").addClass("active");
+           $(this).css("display", "none");
+           $(".search-data").fadeIn(500);
+           $(".close-btn").fadeIn(500);
+           $(".search-data .line").addClass("active");
+           setTimeout(function(){
+             $("input").focus();
+             $(".search-data label").fadeIn(500);
+             $(".search-data span").fadeIn(500);
+           }, 800);
+         });
+         $(".close-btn").click(function(){
+           $(".wrapper").removeClass("active");
+           $(".search-btn").fadeIn(800);
+           $(".search-data").fadeOut(500);
+           $(".close-btn").fadeOut(500);
+           $(".search-data .line").removeClass("active");
+           $("input").val("");
+           $(".search-data label").fadeOut(500);
+           $(".search-data span").fadeOut(500);
+         });
+      </script>
+   </body>
+</html>
