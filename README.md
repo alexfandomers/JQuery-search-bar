@@ -7,5 +7,4 @@ It works as the field for a query input or searches term from the user to search
 In this project, at first, on the webpage, there is only a Search Icon or Search Button but when you click on that button then the webpage screen
 fills with gradient background color and show the search input field with smooth expanding animation at the center of the webpage. 
 There are also shown the search icon for the search and cancel button to cancel that search page.
-
-This search field is created only for design purposes so this program won’t retrieve any data or information when you entered some information and search
+This search field is created only for design purposes so this won’t retrieve any data or information when you entered some information and search.
